@@ -794,6 +794,29 @@ em     { font-style: italic; }
   color: var(--color-secondary);
 }
 
+.location-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  background-color: var(--color-rose-light);
+  border-radius: 50%;
+  color: var(--color-accent);
+}
+
+.location-card__note {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.location-card .btn {
+  margin-top: 0.75rem;
+}
+
 /* --------------------------------------------------------------------------
    14. CONTACT INFO
    -------------------------------------------------------------------------- */
