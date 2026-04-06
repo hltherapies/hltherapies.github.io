@@ -10,9 +10,12 @@ Site vitrine HTML/CSS statique pour Helene Lardeur, psychopraticienne, sophrolog
 ## Stack technique
 - HTML5 semantique pur (pas de framework)
 - CSS custom avec variables (pas de framework CSS)
-- JavaScript vanilla minimal (menu mobile, phone reveal)
-- Hebergement : GitHub Pages
+- JavaScript vanilla minimal (menu mobile, phone reveal, dropdown nav)
+- Icones : SVG inline (Lucide-style) -- pas de icon font externe
+- Hebergement : GitHub Pages (organisation hltherapies)
+- Repo : https://github.com/hltherapies/hltherapies.github.io
 - Domaine : www.hltherapies.com (DNS chez viaduc.fr)
+- URL temporaire : https://hltherapies.github.io
 
 ## Structure
 ```
