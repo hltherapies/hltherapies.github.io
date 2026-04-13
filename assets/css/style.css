@@ -102,9 +102,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3rem);      margin-bottom: 1rem;    }
-h2 { font-size: clamp(1.35rem, 3vw, 1.75rem);  font-weight: 400; margin-bottom: 0.85rem; }
-h3 { font-size: clamp(1.25rem, 3vw, 1.6rem);  margin-bottom: 0.75rem; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.25rem);   margin-bottom: 1rem;    }
+h2 { font-size: clamp(1.2rem, 2.5vw, 1.5rem);  font-weight: 400; margin-bottom: 0.85rem; }
+h3 { font-size: clamp(1.05rem, 2.5vw, 1.3rem); margin-bottom: 0.75rem; }
 h4 { font-size: 1.15rem;                       margin-bottom: 0.6rem;  }
 
 p {
@@ -509,6 +509,11 @@ em     { font-style: italic; }
 .banner-subpage-title {
   text-align: center;
   padding: 1.5rem 1.5rem 0;
+  background-color: var(--color-bg);
+}
+
+.banner-subpage-title--alt {
+  background-color: var(--color-bg-alt);
 }
 
 .banner-subpage-title h1 {
@@ -625,6 +630,15 @@ em     { font-style: italic; }
 
 .section-tarifs {
   background-color: var(--color-bg-alt);
+}
+
+.section-tarifs h2 {
+  text-align: left;
+}
+
+.section-tarifs h2::after {
+  left: 0;
+  transform: none;
 }
 
 .section-accompagnement {
@@ -868,6 +882,19 @@ em     { font-style: italic; }
   margin-bottom: 0.75rem;
 }
 
+.location-card__map {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.location-card__map iframe {
+  display: block;
+  border-radius: var(--radius);
+}
+
 .location-card address {
   font-style: normal;
   font-size: 0.925rem;
@@ -1025,46 +1052,6 @@ em     { font-style: italic; }
   align-items: start;
 }
 
-.tarifs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.tarif-card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  text-align: center;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.tarif-card:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 4px 20px var(--color-shadow);
-}
-
-.tarif-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
-}
-
-.tarif-price {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: 0.25rem;
-}
-
-.tarif-detail {
-  font-size: 0.85rem;
-  color: var(--color-secondary);
-}
-
 .tarifs-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1075,6 +1062,48 @@ em     { font-style: italic; }
   height: auto;
   object-fit: cover;
   border-radius: var(--radius-lg);
+}
+
+.tarifs-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tarif-row:last-child {
+  border-bottom: none;
+}
+
+.tarif-row h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0;
+}
+
+.tarif-price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0;
+}
+
+.tarif-detail {
+  width: 100%;
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  margin-top: 0.15rem;
+  margin-bottom: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -1205,19 +1234,34 @@ em     { font-style: italic; }
 }
 
 /* --------------------------------------------------------------------------
-   22. MAP SECTION
+   22. CONTACT PAGE LAYOUT
    -------------------------------------------------------------------------- */
-.section-map {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  margin-top: 2rem;
+.contact-page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
-.section-map iframe {
+.contact-page-info .contact-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contact-page-info .section-cta {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.contact-page-map iframe {
   width: 100%;
-  height: 100%;
   border: 0;
+  border-radius: var(--radius-lg);
 }
 
 /* --------------------------------------------------------------------------
@@ -1508,12 +1552,13 @@ em     { font-style: italic; }
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .tarifs-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .tarifs-layout {
+    grid-template-columns: 35% 1fr;
   }
 
-  .tarifs-layout {
-    grid-template-columns: 2fr 1fr;
+  .contact-page-layout {
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
   }
 
   .footer-grid {
