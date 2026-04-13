@@ -527,6 +527,11 @@ em     { font-style: italic; }
   padding: var(--section-padding);
 }
 
+.section.section--compact {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .section h2 {
   text-align: center;
   position: relative;
@@ -702,6 +707,17 @@ em     { font-style: italic; }
   border-radius: var(--radius-lg);
   object-fit: cover;
   max-height: 400px;
+}
+
+/* Standalone image (not in a split layout): constrain width, show full image */
+.container > .section-image {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.container > .section-image img {
+  object-fit: contain;
+  max-height: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -1068,7 +1084,7 @@ em     { font-style: italic; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
   margin-bottom: 2.5rem;
 }
 
@@ -1084,11 +1100,22 @@ em     { font-style: italic; }
   box-shadow: 0 4px 24px var(--color-shadow);
 }
 
-.apropos-meta {
-  text-align: center;
+.apropos-portrait-secondary {
+  margin-top: 1.5rem;
+  display: block;
+}
+
+.apropos-content .section-text {
+  margin-bottom: 0;
 }
 
 .apropos-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-primary);
+}
   font-family: var(--font-heading);
   font-size: 1.15rem;
   color: var(--color-primary);
