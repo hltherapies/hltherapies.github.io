@@ -265,9 +265,8 @@ em     { font-style: italic; }
 .nav-logo,
 .header__logo {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   font-weight: 500;
-  font-style: italic;
   color: var(--color-primary);
   text-decoration: none;
   line-height: 1.2;
@@ -1320,7 +1319,6 @@ em     { font-style: italic; }
   margin-bottom: 1rem;
   font-size: clamp(1.4rem, 3vw, 1.8rem);
   font-weight: 500;
-  font-style: italic;
   line-height: 1.2;
   color: var(--color-white);
   text-decoration: none;
