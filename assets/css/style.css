@@ -682,6 +682,12 @@ em     { font-style: italic; }
   margin-bottom: 0.4rem;
 }
 
+.section-divider {
+  border: 0;
+  border-top: 1px dashed var(--color-accent);
+  margin: 2.25rem 0;
+}
+
 /* -- Section CTA (centered button area) -- */
 .section-cta {
   text-align: center;
