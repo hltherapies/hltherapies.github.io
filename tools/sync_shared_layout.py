@@ -44,6 +44,7 @@ PAGES = (
     ),
     PageConfig("mentions-legales/index.html", "mentions"),
     PageConfig("plan-du-site/index.html", "plan"),
+    PageConfig("404.html", "404"),
 )
 
 
@@ -95,7 +96,7 @@ def render_header(current_key: str) -> str:
         <!-- HEADER -->
         <header class="site-header">
             <nav class="site-nav" aria-label="Navigation principale">
-                <a href="/" class="nav-logo" style="font-family: 'Island Moments', cursive;">Hélène Lardeur</a>
+                <a href="/" class="nav-logo" style="font-family: 'Montserrat', sans-serif;">Hélène Lardeur</a>
                 <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation">
                     <span class="nav-toggle-bar"></span>
                     <span class="nav-toggle-bar"></span>
@@ -134,8 +135,8 @@ def render_footer() -> str:
                 <div class="footer-grid">
 
                     <div class="footer-col">
-                        <a href="/" class="footer-logo" style="font-family: 'Island Moments', cursive;">Hélène Lardeur</a>
-                        <p>Hélène Lardeur, Psychopraticienne, je reçois adultes, seniors, adolescents et enfants dans mon cabinet à Aix-en-Provence et de La Ciotat.</p>
+                        <a href="/" class="footer-logo" style="font-family: 'Montserrat', sans-serif;">Hélène Lardeur</a>
+                        <p>Hélène Lardeur, Psychopraticienne, je reçois adultes, seniors, adolescents et enfants dans mes cabinets d'Aix-en-Provence et de La Ciotat.</p>
                         <p>En expatriation ? Je propose des séances en téléconsultation.</p>
 {SOCIAL_LINKS}
                         <a href="https://calendly.com/helene-hltherapies/30min" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
@@ -173,7 +174,7 @@ def render_footer() -> str:
                                 <span>12 rue d'Entrecasteaux, 13100 Aix-en-Provence</span>
                             </div>
                             <div class="contact-line">
-                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                 <button type="button" class="phone-reveal btn btn-sm btn-outline" data-phone="07 76 01 84 49">Afficher le téléphone</button>
                             </div>
                             <div class="contact-line">
@@ -208,7 +209,7 @@ def render_footer() -> str:
         </footer>
 
         <!-- JAVASCRIPT -->
-        <script src="/assets/js/site.js"></script>
+        <script src="/assets/js/site.js" defer></script>
         """
     ).strip("\n")
 
