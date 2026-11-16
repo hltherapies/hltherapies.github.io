@@ -117,7 +117,7 @@ def render_header(current_key: str) -> str:
                     <li><a href="/informations-pratiques-cabinet-de-psychotherapie-a-aix-en-provence-13080-13090-13100-13290-13540/" class="{link_class('infos', current_key)}"{current_attr('infos', current_key)}>Infos pratiques</a></li>
                     <li><a href="/prendre-rendez-vous-psychopraticien-a-aix-en-provence/" class="{link_class('contact', current_key)}"{current_attr('contact', current_key)}>Contact</a></li>
                 </ul>
-                <a href="https://calendly.com/helene-hltherapies/30min" class="nav-cta btn btn-primary" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
+                <a href="https://calendly.com/helene-hltherapies" class="nav-cta btn btn-primary" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
             </nav>
         </header>
 
@@ -139,7 +139,7 @@ def render_footer() -> str:
                         <p>Hélène Lardeur, Psychopraticienne, je reçois adultes, seniors, adolescents et enfants dans mes cabinets d'Aix-en-Provence et de La Ciotat.</p>
                         <p>En expatriation ? Je propose des séances en téléconsultation.</p>
 {SOCIAL_LINKS}
-                        <a href="https://calendly.com/helene-hltherapies/30min" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
+                        <a href="https://calendly.com/helene-hltherapies" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
                     </div>
 
                     <div class="footer-col">
